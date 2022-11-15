@@ -4,6 +4,7 @@
 	(if (lexemep ?answer)
 		then (bind ?answer (lowcase ?answer)))
 	(while (not (member$ ?answer ?allowed-values)) do
+		(printout t "Invalid answer. Please try again! ")
 		(printout t ?question)
 		(bind ?answer (read))
 		(if (lexemep ?answer)
